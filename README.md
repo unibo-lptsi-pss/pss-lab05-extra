@@ -63,10 +63,9 @@ Creare due implementazioni diverse di `AnimalCompareStrategy`:
 - `AnimalCompareBySpecies`: Ordina gli animali in base alla loro specie, in ordine alfabetico.
 
 - Le slide del corso contengono [un esempio simile](https://unibo-lptsi-pss.github.io/11-intro-agile-sw-design-patterns/#/26).
-  - Provate a capirlo e a replicarlo in autonomia.
+  - Provate a capirlo e a replicarlo per questo dominio in autonomia.
   
 Infine, utilizzando un approccio TDD, implementare il seguente metodo statico:
-
 
 ```java
 public static void sortAnimal(Animal[] animal, AnimalCompareStrategy comparator);

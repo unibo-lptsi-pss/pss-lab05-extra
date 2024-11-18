@@ -53,7 +53,7 @@ Introdurre un sistema di [Tassonomia](https://it.wikipedia.org/wiki/Tassonomia) 
 
 Creare un'interfaccia `AnimalCompareStrategy` che contiene il seguente metodo:
 ```java
-int compareTwoAnimals(Animal a1, Animal a2);
+public int compareTwoAnimals(Animal a1, Animal a2);
 ```
 - Il metodo deve ritornare un intero negativo se `a1` è più piccolo di `a2`,
 `0` se sono uguali e un intero positivo se `a1` è più grande di `a2`.

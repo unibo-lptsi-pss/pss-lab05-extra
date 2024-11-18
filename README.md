@@ -48,3 +48,37 @@ Introdurre un sistema di [Tassonomia](https://it.wikipedia.org/wiki/Tassonomia) 
 
 
 ![Gradi di tassonomia: in ordine Life, Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species](https://upload.wikimedia.org/wikipedia/commons/a/a5/Biological_classification_L_Pengo_vflip.svg)
+
+# Fase 4 - Comparatori con Strategy
+
+Creare un'interfaccia `AnimalCompareStrategy` che contiene il seguente metodo:
+```java
+int compareTwoAnimals(Animal a1, Animal a2);
+```
+- Il metodo deve ritornare un intero negativo se `a1` è più piccolo di `a2`,
+`0` se sono uguali e un intero positivo se `a1` è più grande di `a2`.
+
+Creare due implementazioni diverse di `AnimalCompareStrategy`:
+- `AnimalCompareByWeight`: Ordina gli animali in base al loro peso, dal più leggero al più pesante.
+- `AnimalCompareBySpecies`: Ordina gli animali in base alla loro specie, in ordine alfabetico.
+
+- Le slide del corso contengono [un esempio simile](https://unibo-lptsi-pss.github.io/11-intro-agile-sw-design-patterns/#/26).
+  - Provate a capirlo e a replicarlo in autonomia.
+  
+Infine, utilizzando un approccio TDD, implementare il seguente metodo statico:
+
+
+```java
+public static void sortAnimal(Animal[] animal, AnimalCompareStrategy comparator);
+```
+Si provi in autonomia a identificare una posizione sensata all'interno del codice per implementare questo metodo.
+
+# Fase 5 - Refactoring
+
+Java mette a disposizione un'interfaccia `Comparator<T>` che è molto simile a quella che abbiamo definito nell'esercizio precedente.
+
+- Visionare la seguente pagina; è la JavaDoc dell'interfaccia [Comparable](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Comparator.html).
+  - Provare a capire in autonomia come funziona l'interfaccia e quale sia il suo scopo. In caso di dubbi, chiedere ai docenti.
+  - `Comparator` accetta un tipo generico `T`, che è il tipo di oggetti che si vogliono comparare.
+
+Semplificare il codice dell'esercizio precedente utilizzando `Comparator<T>`.
